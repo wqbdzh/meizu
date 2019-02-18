@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      div{
+          height:100px;
+          background: red;
+          margin-top:10px;
+          display:none;
+      }
+    </style>
+</head>
+<body>
+    <input type="button" value='展示 ' id='btn1'>
+    <input type="button" value='显示内容' id='btn2'>
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+
+    <script>
+      var btn1=document.querySelector('#btn1')
+      var bnt2=document.getElementById('btn2')
+      var divAll=document.getElementsByTagName('div')
+      btn1.onclick=function(){
+          for(i=0;i<divAll.length;i++){
+              divAll[i].style.display='block';
+          }
+      }
+      btn2.onclick=function(){
+          for(i=0;i<divAll.length;i++){
+              divAll[i].innerHTML='我是内容';
+          }
+      }
+    </script>
+   
+</body>
+</html>

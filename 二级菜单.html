@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+     a{
+         text-decoration: none;
+         color:#323c46;
+     }
+ ul,li{
+     list-style: none;
+ }
+ .wrap>ul{
+     height:30px;
+     background:lightseagreen ;
+ }
+ .wrap>ul>li{
+     text-align: center;
+     float:left;
+     margin-left:10px;
+     width:100px;
+     height:30px;
+     background:lightgreen;
+ }
+ .wrap>ul>li>ul>li{
+     text-align: center;
+     width:100px;
+     height:30px;
+     background:lightgreen;
+ }
+ .wrap>ul>li>ul{
+     display: none;
+ }
+</style>
+<body>
+    <div class='wrap'>
+        <ul>
+            <li>
+                <a href='#'>第1个列表</a>
+                <ul>
+                    <li><a href='#'>第1个子列表</a></li>
+                    <li><a href='#'>第2个子列表</a></li>
+                    <li><a href='#'>第3个子列表</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href='#'>第2个列表</a>
+                <ul>
+                    <li><a href='#'>第1个子列表</a></li>
+                    <li><a href='#'>第2个子列表</a></li>
+                    <li><a href='#'>第3个子列表</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href='#'>第3个列表</a>
+                <ul>
+                    <li><a href='#'>第1个子列表</a></li>
+                    <li><a href='#'>第2个子列表</a></li>
+                    <li><a href='#'>第3个子列表</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src='js/jquery.js'></script>
+    <script>
+      $(function(){
+          $(".wrap>ul>li").mouseenter(function(){
+            $(this).children('ul').show()
+          })
+          $(".wrap>ul>li").mouseleave(function(){
+            $(this).children('ul').hide()
+          })
+      })
+    
+    </script>
+</body>
+</html>
